@@ -4,10 +4,11 @@ import datetime
 import holidays
 from linebot.v3.messaging import MessagingApi, Configuration, ApiClient
 from linebot.v3.messaging.models import TextMessage, PushMessageRequest
+import os
 
-# --- 設定項目 ---
-CHANNEL_ACCESS_TOKEN = '5I6OdYN7lmE6P/SqfHNYXaXq/QiUE+uB0GYnhpt1uZTUeu1HR+dgWAf3cEK21FJX46hF3QGs3/JahS156oSI8hjS77HU/3LuBjDNzR7u7EQa+CI3rA+EJJTtbXW79P7925qy+SyNAunGFKOG2sweVgdB04t89/1O/w1cDnyilFU='
-GROUP_ID = 'Cfcba2222ed8b34ce1b3771c370006dc3'  # さっき出たやつ
+CHANNEL_ACCESS_TOKEN = os.environ["5I6OdYN7lmE6P/SqfHNYXaXq/QiUE+uB0GYnhpt1uZTUeu1HR+dgWAf3cEK21FJX46hF3QGs3/JahS156oSI8hjS77HU/3LuBjDNzR7u7EQa+CI3rA+EJJTtbXW79P7925qy+SyNAunGFKOG2sweVgdB04t89/1O/w1cDnyilFU="]
+GROUP_ID = os.environ["Cfcba2222ed8b34ce1b3771c370006dc3"]
+
 
 # 日本の祝日＋除外したい特定日
 jp_holidays = holidays.Japan()
